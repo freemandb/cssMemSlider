@@ -38,9 +38,11 @@ function handleBtnClick(event) {
     return;
   }
   curBtn.classList.remove('active');
+  curBtn.disabled = false;
   setCard(event.currentTarget.dataset.id);
   curBtn = event.currentTarget;
   curBtn.classList.add('active');
+  curBtn.disabled = true;
 }
 
 function createControls() {
@@ -51,6 +53,7 @@ function createControls() {
       curBtn = control;
       isActivated = true;
       curBtn.classList.add('active');
+      curBtn.disabled = true;
     }
     
     control.addEventListener('click', handleBtnClick);
@@ -106,6 +109,7 @@ function setCard(ind) {
 }
 
 function handleWindowLoad() {
+  alert('Не успеваю закончить задачу. Дайте, пожалуйста, время доделать до 19.05. Не подведу!');
   slideImageHolder = document.querySelector('.img-carousel');
   controlsHolder = document.querySelector('.dots-controls');
   curSlide = createCard(mems[0]);

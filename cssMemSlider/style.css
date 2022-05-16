@@ -56,6 +56,10 @@ button.control-dot {
   background: lightyellow;
 }
 
+button:disabled:hover span {
+  background: lightgreen;
+}
+
 .active span {
   background: lightgreen;
 }
