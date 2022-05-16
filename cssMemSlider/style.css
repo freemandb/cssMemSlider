@@ -60,8 +60,9 @@ button.control-dot {
   background: lightgreen;
 }
 
-.active button {
+button.active {
   cursor: default;
+  
 }
 
 .textt-and-controls {

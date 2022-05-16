@@ -26,6 +26,7 @@ let controlsHolder;
 let curCard = 1;
 let curSlide;
 let isMoving = false;
+let curBtn
 
 function createControlButton(data) {
     let templateCard = `<button role="button" class="control-dot" data-id="${data.id}"><span></span></button>`
@@ -36,13 +37,22 @@ function handleBtnClick(event) {
   if (isMoving) {
     return;
   }
-  console.log(event.currentTarget);
-  setCard(event.currentTarget.dataset.id)
+  curBtn.classList.remove('active');
+  setCard(event.currentTarget.dataset.id);
+  curBtn = event.currentTarget;
+  curBtn.classList.add('active');
 }
 
 function createControls() {
+  let isActivated = false;
   mems.forEach((mem) => {
     let control = createControlButton(mem);
+    if (!isActivated) {
+      curBtn = control;
+      isActivated = true;
+      curBtn.classList.add('active');
+    }
+    
     control.addEventListener('click', handleBtnClick);
     controlsHolder.appendChild(control);
   })
