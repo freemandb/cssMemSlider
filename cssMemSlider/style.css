@@ -93,12 +93,11 @@ html {
 
 .label:hover .control-input {
   border: 0.3rem solid #ffffff;
-
 }
 
 .label:active .control-input {
   border: 0.3rem solid #ffffff;
-
+  background-color: #ffffff;
 }
 
 #input2:checked~.slider-frame .slider {
