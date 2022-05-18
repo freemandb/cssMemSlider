@@ -83,21 +83,21 @@ html {
 }
 
 .control-input {
-  width: 10px;
-  height: 10px;
+  width: 0.5rem;
+  height: 0.5rem;
   background: transparent;
   border-radius: 50%;
-  border: 2px solid #ff00ff;
+  border: 0.2rem solid #ff00ff;
   cursor: pointer;
 }
 
 .label:hover .control-input {
-  border: 3px solid #ffffff;
+  border: 0.3rem solid #ffffff;
 
 }
 
 .label:active .control-input {
-  border: 4px solid #ffffff;
+  border: 0.3rem solid #ffffff;
 
 }
 
@@ -127,7 +127,7 @@ html {
 
 #input1:checked~.text-and-controls .btn-control-holder .label1 .control-input {
   background-color: #ff00ff;
-  border: 3px solid #ff00ff;
+  border: 0.3rem solid #ff00ff;
   cursor: default;
 }
 
@@ -137,7 +137,7 @@ html {
 
 #input2:checked~.text-and-controls .btn-control-holder .label2 .control-input {
   background-color: #ff00ff;
-  border: 3px solid #ff00ff;
+  border: 0.3rem solid #ff00ff;
   cursor: default;
 }
 
@@ -147,7 +147,7 @@ html {
 
 #input3:checked~.text-and-controls .btn-control-holder .label3 .control-input {
   background-color: #ff00ff;
-  border: 3px solid #ff00ff;
+  border: 0.3rem solid #ff00ff;
   cursor: default;
 }
 
@@ -157,7 +157,7 @@ html {
 
 #input4:checked~.text-and-controls .btn-control-holder .label4 .control-input {
   background-color: #ff00ff;
-  border: 3px solid #ff00ff;
+  border: 0.3rem solid #ff00ff;
   cursor: default;
 }
 
