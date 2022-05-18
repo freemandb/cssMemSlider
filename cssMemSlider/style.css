@@ -1,0 +1,195 @@
+html {
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+.main-wrapper {
+  width: 96%;
+  height: 96vh;
+  margin: 2vh 2%;
+}
+
+.input {
+  width: 0;
+  height: 0;
+}
+
+.slider-frame {
+  background-color: #ff00ff;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 2s;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 auto;
+  display: flex;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.text-and-controls {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2%;
+  justify-content: space-between;
+}
+
+.text-frame {
+  display: flex;
+  overflow: hidden;
+}
+
+.text {
+  display: flex;
+  transition: transform 2s;
+}
+
+.mem-div {
+  min-width: 100%;
+}
+
+.mem-div p {
+  width: 100%;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+.btn-control-holder {
+  display: flex;
+}
+
+.label {
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-input {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: transparent;
+  border-radius: 50%;
+  border: 0.2rem solid #ff00ff;
+  cursor: pointer;
+}
+
+.label:hover .control-input {
+  border: 0.3rem solid #ffffff;
+}
+
+.label:active .control-input {
+  border: 0.3rem solid #ffffff;
+  background-color: #ffffff;
+}
+
+#input2:checked~.slider-frame .slider {
+  transform: translateX(-100%);
+}
+
+#input3:checked~.slider-frame .slider {
+  transform: translateX(-200%);
+}
+
+#input4:checked~.slider-frame .slider {
+  transform: translateX(-300%);
+}
+
+#input2:checked~.text-and-controls .text-frame .text {
+  transform: translateX(-100%);
+}
+
+#input3:checked~.text-and-controls .text-frame .text {
+  transform: translateX(-200%);
+}
+
+#input4:checked~.text-and-controls .text-frame .text {
+  transform: translateX(-300%);
+}
+
+#input1:checked~.text-and-controls .btn-control-holder .label1 .control-input {
+  background-color: #ff00ff;
+  border: 0.3rem solid #ff00ff;
+  cursor: default;
+}
+
+#input1:checked~.text-and-controls .btn-control-holder .label1{
+  cursor: default;
+}
+
+#input2:checked~.text-and-controls .btn-control-holder .label2 .control-input {
+  background-color: #ff00ff;
+  border: 0.3rem solid #ff00ff;
+  cursor: default;
+}
+
+#input2:checked~.text-and-controls .btn-control-holder .label2 {
+  cursor: default;
+}
+
+#input3:checked~.text-and-controls .btn-control-holder .label3 .control-input {
+  background-color: #ff00ff;
+  border: 0.3rem solid #ff00ff;
+  cursor: default;
+}
+
+#input3:checked~.text-and-controls .btn-control-holder .label3 {
+  cursor: default;
+}
+
+#input4:checked~.text-and-controls .btn-control-holder .label4 .control-input {
+  background-color: #ff00ff;
+  border: 0.3rem solid #ff00ff;
+  cursor: default;
+}
+
+#input4:checked~.text-and-controls .btn-control-holder .label4 {
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+
+  .text-and-controls {
+    flex-direction: column-reverse;
+  }
+
+  .btn-control-holder {
+    margin: 1rem auto;
+  }
+
+  .mem-div p {
+    width: 100%;
+    margin: 0;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 492px) {
+  .mem-div p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .mem-div p {
+    font-size: 1rem;
+  }
+}
